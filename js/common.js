@@ -3,7 +3,8 @@ $(function() {
 	$(document).ready(function() {
 		var $charsSlick = $('.chars-slider').slick({
 				fade: true,
-				autoplay: true
+				autoplay: true,
+				arrows: false
 		});
 
 		$('.chars-nav__item').click(function() {
@@ -136,7 +137,7 @@ $(function() {
 		    valid.regListeners();
 		  };
 		  this.regListeners = function(){
-		    console.log('regListeners');
+		    
 		    $('form').on('submit', valid.formSubmit);
 		    $('form input[type="text"]').on('keydown', valid.inputKeyDown);
 		    $('form input[type="text"]').on('focusout', valid.inputFocusOut);
@@ -149,7 +150,7 @@ $(function() {
 		     return false;
 		    }
 		    var th = $(this);
-		  		console.log(th);
+		  		
 		  		$.ajax({
 		  			type: "POST",
 					url: "mail.php", //Change
@@ -191,7 +192,7 @@ $(function() {
 		  };
 		  
 		  this.createTooltip = function($toolParent){
-		    console.log($toolParent);
+		    
 		  	$toolParent.addClass('invalid');
 		  	$toolParent.closest('label').addClass('invalid');
 		  };

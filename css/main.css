@@ -1091,6 +1091,8 @@ header {
   width: 100%;
   margin-top: 40px;
   display: none;
+  position: relative;
+  z-index: 0;
 }
 
 .header-top {
@@ -1163,6 +1165,8 @@ header {
 
 .header-bottom {
   margin-bottom: 30px;
+  position: relative;
+  z-index: 1;
 }
 
 .header-bottom p {
@@ -1264,7 +1268,7 @@ header {
 
 .header-video__btn .icon {
   background-image: url(../img/sprite.png);
-  background-position: -680px -757px;
+  background-position: -776px -757px;
   width: 25px;
   height: 29px;
   top: 0;
@@ -1317,6 +1321,10 @@ header {
 
 .product-right p:last-of-type {
   margin-bottom: 30px;
+}
+
+.product-form {
+  text-align: left;
 }
 
 .product-price {
@@ -1651,7 +1659,7 @@ header {
 }
 
 .features {
-  padding-top: 120px;
+  padding-top: 30px;
   background-color: #1F43BA;
   font-family: "Source Sans Pro", sans-serif;
 }
@@ -1682,7 +1690,6 @@ header {
 
 .features-left ul li {
   margin-bottom: 5px;
-  list-style-type: none;
 }
 
 .features-left img {
@@ -1871,9 +1878,16 @@ header {
 
 .icon-fb {
   background-image: url(../img/sprite.png);
-  background-position: -640px -757px;
+  background-position: -736px -757px;
   width: 35px;
   height: 35px;
+}
+
+.icon-vk {
+  background-image: url(../img/sprite.png);
+  background-position: -694px -757px;
+  width: 37px;
+  height: 37px;
 }
 
 .reviews-user__name {
@@ -1923,26 +1937,8 @@ header {
   vertical-align: middle;
 }
 
-.icon-inst {
-  background-image: url(../img/sprite.png);
-  background-position: 0px -757px;
-  width: 116px;
-  height: 116px;
-}
-
 .icon-yt {
   margin-right: 15px;
-  background-image: url(../img/sprite.png);
-  background-position: -121px -757px;
-  width: 110px;
-  height: 77px;
-}
-
-.icon-fb-big {
-  background-image: url(../img/sprite.png);
-  background-position: -94px -878px;
-  width: 84px;
-  height: 84px;
 }
 
 .gift {
@@ -2060,7 +2056,7 @@ header {
 
 .icon-return {
   background-image: url(../img/sprite.png);
-  background-position: -344px -878px;
+  background-position: -624px -757px;
   width: 65px;
   height: 65px;
 }
@@ -2096,7 +2092,7 @@ header {
 .gift-form .check-custom:active:after {
   display: block;
   background-image: url(../img/sprite.png);
-  background-position: -738px -757px;
+  background-position: -834px -757px;
   width: 16px;
   height: 16px;
 }
@@ -2111,7 +2107,7 @@ header {
   margin: auto;
   position: absolute;
   background-image: url(../img/sprite.png);
-  background-position: -759px -757px;
+  background-position: -855px -757px;
   width: 16px;
   height: 16px;
 }
@@ -2325,8 +2321,18 @@ footer .container {
 
 @media only screen and (max-width: 960px) {
   header {
-    background-image: url(../img/bg_header-middle.png);
-    background-position: -500px bottom;
+    padding-bottom: 0;
+    background-image: none;
+    background-color: #FFA2B4;
+  }
+
+  .header-baby {
+    display: block;
+    margin-top: -200px;
+  }
+
+  .header-features {
+    display: none;
   }
 
   .chars {
@@ -2343,6 +2349,10 @@ footer .container {
 
   .reviews {
     padding-top: 50px;
+  }
+
+  .order {
+    background-position: center;
   }
 }
 
@@ -2526,6 +2536,10 @@ footer .container {
   .gift-right {
     margin-top: 0;
   }
+
+  .features-left ul {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 560px) {
@@ -2547,14 +2561,8 @@ footer .container {
     margin-bottom: 50px;
   }
 
-  header {
-    padding-bottom: 0;
-    background-image: none;
-    background-color: #FFA2B4;
-  }
-
   .header-baby {
-    display: block;
+    margin-top: 0;
   }
 
   .product form label {
@@ -2614,13 +2622,12 @@ footer .container {
     font-size: 43px;
   }
 
-  .socials-logos .icon {
-    display: block;
-    margin: 0 auto;
+  .socials-logos .icon img {
+    width: 50px;
   }
 
-  .socials-logos .icon-yt {
-    margin-bottom: 20px;
+  .socials-logos .icon-fb-big img {
+    width: 40px;
   }
 
   .gift__no-paddings {
@@ -2673,12 +2680,6 @@ footer .container {
 
   .features .features-img-boat {
     margin-top: -150px;
-  }
-
-  .socials-logos .icon {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 15px;
   }
 
   .gift-form__check-text {

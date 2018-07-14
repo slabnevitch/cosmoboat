@@ -1,6 +1,17 @@
 $(function() {
 
 	$(document).ready(function() {
+		
+		$('.popup-youtube').magnificPopup({
+			disableOn: 560,
+			type: 'iframe',
+			mainClass: 'mfp-fade',
+			removalDelay: 160,
+			preloader: false,
+
+			fixedContentPos: false
+		});
+
 		var $charsSlick = $('.chars-slider').slick({
 				fade: true,
 				autoplay: true,
@@ -64,8 +75,6 @@ $(function() {
 			if($.cookie("timer")){
 				
 				var dateEnd = $.cookie('timer');
-
-			  	// console.log('dateEnd ' + date2.getTime());
 			}else{
 				
 				var dateEnd = correctDate(3, 8, 35);
@@ -137,7 +146,7 @@ $(function() {
 		    valid.regListeners();
 		  };
 		  this.regListeners = function(){
-		    
+
 		    $('form').on('submit', valid.formSubmit);
 		    $('form input[type="text"]').on('keydown', valid.inputKeyDown);
 		    $('form input[type="text"]').on('focusout', valid.inputFocusOut);
@@ -150,7 +159,7 @@ $(function() {
 		     return false;
 		    }
 		    var th = $(this);
-		  		
+
 		  		$.ajax({
 		  			type: "POST",
 					url: "mail.php", //Change
@@ -192,7 +201,7 @@ $(function() {
 		  };
 		  
 		  this.createTooltip = function($toolParent){
-		    
+
 		  	$toolParent.addClass('invalid');
 		  	$toolParent.closest('label').addClass('invalid');
 		  };
